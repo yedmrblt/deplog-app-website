@@ -1,0 +1,48 @@
+{
+  "name": "deplog-website",
+  "description": "Deplog app website",
+  "version": "1.5.0",
+  "author": {
+    "name": "Yunus Emre Demirbulut",
+    "email": "y.emre.demirbulut@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^2.47.0",
+    "@vercel/analytics": "^1.4.1",
+    "clsx": "^2.1.1",
+    "comma-number": "^2.1.0",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^12.4.1",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.455.0",
+    "next": "^15.0.2",
+    "next-contentlayer": "^0.3.4",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0-alpha.26",
+    "@types/node": "^22.8.4",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "autoprefixer": "^10.4.20",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^6.0.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^4.0.0-alpha.26",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+  }
+}

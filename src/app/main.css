@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,87.5,800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: var(--font-sans);
+  --font-family-display: var(--font-display);
+  --color-primary: var(--color-sky-500);
+  --color-default: var(--color-zinc-800);
+  --color-mute: var(--color-zinc-500);
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
+.bg-opacity-15 {
+  --tw-bg-opacity: 0.15;
+}
+
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
+.shadow {
+  @apply shadow-[4px_4px_0_#00000010];
+}
+
+::selection {
+  @apply bg-primary text-white shadow;
+}
