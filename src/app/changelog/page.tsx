@@ -9,6 +9,7 @@ interface IChangeLog {
   id: number;
   version: string;
   media?: string;
+  date: string;
   changes: { title?: string; text: string }[];
 }
 
@@ -17,6 +18,7 @@ const snapshots: IChangeLog[] = [
     id: 1,
     version: "v1.0",
     media: "/changelog/v1-0.mp4",
+    date: "Jan 16, 2025",
     changes: [
       {
         title: "Deplog is live!",
@@ -28,10 +30,11 @@ const snapshots: IChangeLog[] = [
     id: 2,
     media: "/changelog/v1-1.mp4",
     version: "v1.1",
+    date: "Jan 27, 2025",
     changes: [
       {
         title: "Team accounts support",
-        text: "You can monitor your team account's deployments by logging in with your Vercel Team ID",
+        text: "You can monitor your team account's deployments by logging in with your Vercel Team ID.",
       },
     ],
   },
@@ -39,6 +42,7 @@ const snapshots: IChangeLog[] = [
     id: 3,
     media: "/changelog/v1-2.mp4",
     version: "v1.2",
+    date: "Feb 4, 2025",
     changes: [
       {
         title: "Elapsed build time",
@@ -189,6 +193,9 @@ export default function Changelog() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="absolute"
                   >
+                    <div className="pb-4 font-mono text-sm font-semibold">
+                      {snapshot.date}
+                    </div>
                     {snapshot.changes.map((change, index) => {
                       return (
                         <motion.div

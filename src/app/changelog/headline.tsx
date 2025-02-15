@@ -22,15 +22,11 @@ export default function ChangelogHeadline() {
                 strokeLinejoin="round"
               >
                 <path
-                  d={`M5,${35} Q30,${30} 50,${35} T95,${35}`}
+                  d={`M5,${35} Q25,${50.5} 50,${60.5} T95,${75}`}
                   className="text-red-500"
                 />
                 <path
-                  d={`M5,${53.5} Q25,${60.5} 50,${58.5} T95,${53.5}`}
-                  className="text-red-500"
-                />
-                <path
-                  d={`M5,${75} Q40,${80} 50,${75} T95,${75}`}
+                  d={`M5,${75} Q25,${60.5} 50,${45.5} T95,${20}`}
                   className="text-red-500"
                 />
               </svg>
