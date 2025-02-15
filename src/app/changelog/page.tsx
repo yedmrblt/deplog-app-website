@@ -178,7 +178,7 @@ export default function Changelog() {
               </div>
             </div>
           </div>
-          <div className="relative grid w-full gap-8 sm:mt-24 sm:w-lg">
+          <div className="relative -mt-[40px] grid w-full gap-8 sm:mt-24 sm:w-lg">
             <AnimatePresence>
               {snapshots.map((snapshot, snapshotIndex) => {
                 return (
