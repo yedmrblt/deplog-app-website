@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { META } from "@/lib/meta";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUpIcon, ChevronDownIcon } from "lucide-react";
 import ChangelogHeadline from "./headline";
@@ -184,54 +185,89 @@ export default function Changelog() {
               </div>
             </div>
           </div>
-          <div className="relative -mt-[40px] grid w-full gap-8 sm:mt-24 sm:w-lg">
+          <div className="-mt-[40px] w-full gap-8 sm:mt-24 sm:w-lg">
             <AnimatePresence>
-              {snapshots.map((snapshot, snapshotIndex) => {
-                return (
-                  <motion.div
-                    key={snapshotIndex}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: currentIndex === snapshotIndex ? 1 : 0,
-                      y: 0,
-                    }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="absolute"
-                  >
-                    <div className="pb-4 font-mono text-sm font-semibold">
-                      {snapshot.date}
-                    </div>
-                    {snapshot.changes.map((change, index) => {
-                      return (
-                        <motion.div
-                          key={`${snapshotIndex}-${index}`}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{
-                            opacity: 1,
-                            y: 0,
-                          }}
-                          exit={{ opacity: 0, y: -20 }}
-                          transition={{ duration: 0.6, ease: "easeOut" }}
-                          className="pb-12"
-                        >
-                          {change.title && (
-                            <h2 className="text-dark pb-2 font-[Bricolage_Grotesque] text-2xl font-bold sm:text-4xl">
-                              {change.title}
-                            </h2>
-                          )}
-                          <p className="max-w-lg text-justify font-mono text-xl leading-relaxed font-semibold text-black sm:text-2xl">
-                            {change.text}
-                          </p>
-                        </motion.div>
-                      );
-                    })}
-                  </motion.div>
-                );
-              })}
+              <div>
+                <div className="pb-4 font-mono text-sm font-semibold">
+                  {snapshots[currentIndex].date}
+                </div>
+                {snapshots[currentIndex].changes.map((change, index) => {
+                  return (
+                    <motion.div
+                      key={`${currentIndex}-${index}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className="pb-12"
+                    >
+                      {change.title && (
+                        <h2 className="text-dark pb-2 font-[Bricolage_Grotesque] text-2xl font-bold sm:text-4xl">
+                          {change.title}
+                        </h2>
+                      )}
+                      <p className="max-w-lg text-justify font-mono text-xl leading-relaxed font-semibold text-black sm:text-2xl">
+                        {change.text}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </AnimatePresence>
           </div>
         </motion.section>
+        <footer className="mt-24 flex w-full flex-col items-center justify-center gap-12 sm:gap-4">
+          <p className="font-serif text-4xl font-semibold text-stone-400 sm:text-3xl sm:text-black">
+            Deplog
+          </p>
+          <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <a
+              href="/"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              Home
+            </a>
+            <div className="hidden h-1 w-1 rounded-full bg-stone-300 sm:block"></div>
+            <a
+              href={META.links.appstore}
+              target="_blank"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              App Store
+            </a>
+            <div className="hidden h-1 w-1 rounded-full bg-stone-300 sm:block"></div>
+            <a
+              href="mailto:y.emre.demirbulut@gmail.com"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              Contact
+            </a>
+            <div className="hidden h-1 w-1 rounded-full bg-stone-300 sm:block"></div>
+            <a
+              href={META.links.x}
+              target="_blank"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              X (a.k.a Twitter)
+            </a>
+            <div className="hidden h-1 w-1 rounded-full bg-stone-300 sm:block"></div>
+            <a
+              href="/privacy"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              Privacy Policy
+            </a>
+          </div>
+          <div>
+            <p className="font-semibold text-stone-400">
+              Crafted by Emre Demirbulut
+            </p>
+            <p className="text-center font-semibold text-stone-400">©2025</p>
+          </div>
+        </footer>
       </section>
     </>
   );
