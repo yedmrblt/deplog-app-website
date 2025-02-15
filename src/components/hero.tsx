@@ -27,7 +27,7 @@ export default function Hero() {
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
         className="pt-5 pb-10"
       >
-        <h1 className="font-bricolage relative flex flex-col items-center text-center text-5xl leading-[1.05] font-bold tracking-tight sm:text-8xl sm:leading-none">
+        <h1 className="relative flex flex-col items-center text-center font-[Bricolage_Grotesque] text-5xl leading-[1.05] font-bold tracking-tight sm:text-8xl sm:leading-none">
           <span className="inline-block">
             <span>
               <span>Vercel</span>

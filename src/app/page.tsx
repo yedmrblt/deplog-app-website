@@ -60,6 +60,13 @@ export default function Index() {
             >
               Privacy Policy
             </a>
+            <div className="hidden h-1 w-1 rounded-full bg-stone-300 sm:block"></div>
+            <a
+              href="/changelog"
+              className="text-lg font-semibold text-[#0b0b0b] hover:text-[#000000] sm:text-base"
+            >
+              Changelog
+            </a>
           </div>
           <div>
             <p className="font-semibold text-stone-400">
