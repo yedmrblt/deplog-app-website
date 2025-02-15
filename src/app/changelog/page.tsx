@@ -82,7 +82,13 @@ export default function Changelog() {
         >
           <ChangelogHeadline />
         </motion.div>
-        <section className="flex w-[300px] flex-col flex-wrap items-start justify-center sm:mt-16 sm:w-full sm:flex-row sm:gap-24 md:flex-nowrap">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          className="flex w-[300px] flex-col flex-wrap items-start justify-center sm:mt-16 sm:w-full sm:flex-row sm:gap-24 md:flex-nowrap"
+        >
           <div className="relative flex flex-col items-center justify-center gap-16 sm:flex-row">
             <div className="relative h-[700px] w-[300px] overflow-hidden sm:min-w-[400px]">
               <div className="absolute inset-0 flex items-center justify-center perspective-[1000px]">
@@ -225,7 +231,7 @@ export default function Changelog() {
               })}
             </AnimatePresence>
           </div>
-        </section>
+        </motion.section>
       </section>
     </>
   );
