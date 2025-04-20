@@ -29,6 +29,16 @@ export const metadata: Metadata = {
     icon: "/icons/icon-android-chrome-192x192.png",
     apple: "/icons/icon-apple-touch-icon.png",
   },
+  openGraph: {
+    images: ["/og/deplog-og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: META.title,
+    description: META.description,
+    images: ["/og/deplog-og.png"],
+    creator: META.name,
+  },
 };
 
 export default function RootLayout({
