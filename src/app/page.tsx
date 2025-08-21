@@ -1,4 +1,4 @@
-import ButtonAppStore from "@/components/button-app-store";
+import ButtonAppStore from "@/components/button-appstore";
 import Hero from "@/components/hero";
 import Desktop from "@/components/desktop";
 import { META } from "@/lib/meta";
@@ -73,6 +73,19 @@ export default function Index() {
               Crafted by Emre Demirbulut
             </p>
             <p className="text-center font-semibold text-stone-400">©2025</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-stone-400">
+              Inspired by{" "}
+              <a
+                href="https://tryalcove.com"
+                rel="noreferrer nofollow"
+                target="_blank"
+                className="underline"
+              >
+                Alcove
+              </a>
+            </p>
           </div>
         </footer>
       </section>

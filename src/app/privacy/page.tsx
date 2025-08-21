@@ -7,18 +7,16 @@ export default function Privacy() {
             Privacy policy
           </h1>
           <p className="mt-12 max-w-3xl font-mono text-xl leading-relaxed font-semibold text-black sm:mt-24 sm:text-2xl">
-            No data or personal information is collected by Deplog.
+            Your privacy matters. Deplog does not collect, store, or share any
+            personal data or usage information. Everything you do stays on your
+            Mac.
           </p>
           <br></br>
           <br></br>
-          <h2 className="font-[Bricolage_Grotesque] text-2xl leading-[1.05] font-bold tracking-tight sm:text-3xl sm:text-4xl sm:leading-none">
-            Have questions?
-          </h2>
           <p className="mt-4 max-w-3xl font-mono text-xl leading-relaxed font-semibold text-black sm:text-2xl">
-            If you have any questions or suggestions regarding this privacy
-            policy, do not hesitate to{" "}
+            If you have any questions about this policy, please feel free to{" "}
             <a href="mailto:y.emre.demirbulut@gmail.com" className="underline">
-              contact me
+              reach out to me
             </a>
             .
           </p>

@@ -116,7 +116,6 @@ export default function PulseApp() {
         className="h-full w-full"
       >
         <div className="relative w-full rounded-2xl bg-[#0b0b0b] p-4 shadow-2xl shadow-slate-800/60 backdrop-blur-3xl">
-          <div className="absolute -top-3 left-8 h-0 w-0 border-r-[12px] border-b-[12px] border-l-[12px] border-r-transparent border-b-[#000000] border-l-transparent sm:left-1/2 sm:block sm:-translate-x-1/2"></div>
           <div className="mb-6 flex items-center justify-between text-zinc-400">
             {!selectedDeployment && (
               <div className="flex items-center gap-2">
