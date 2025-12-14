@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     apple: "/icons/icon-apple-touch-icon.png",
   },
   openGraph: {
-    images: ["/og/deplog-og.png"],
+    images: ["/og/deplog-og-2.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: META.title,
     description: META.description,
-    images: ["/og/deplog-og.png"],
+    images: ["/og/deplog-og-2.png"],
     creator: META.name,
   },
 };
