@@ -15,7 +15,7 @@ export default function Hero() {
       >
         Deplog
         <span className="absolute ml-2 rounded-lg border px-1 py-0.5 font-mono text-sm font-semibold text-stone-500">
-          v1.2
+          v2.0
         </span>
       </motion.p>
 
@@ -28,8 +28,9 @@ export default function Hero() {
         className="pt-5 pb-10"
       >
         <h1 className="flex flex-col items-center text-center font-[Bricolage_Grotesque] text-5xl font-bold sm:text-8xl">
-          <span>Monitor Vercel deployments</span>
-          <span>from your menu bar</span>
+          <span>Monitor</span>
+          <span>GitHub & Vercel </span>
+          <span>deployments on your Mac</span>
         </h1>
       </motion.div>
       <motion.div

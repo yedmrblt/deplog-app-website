@@ -10,10 +10,11 @@ export default function Index() {
         <Hero></Hero>
         <Desktop></Desktop>
         <section>
-          <p className="mt-24 max-w-3xl text-justify font-mono text-2xl leading-relaxed font-semibold text-black sm:mt-48 sm:text-3xl">
-            &nbsp; Monitor your Vercel deployments real-time on your Mac—no need
-            to open the web app! With Deplog, all your deployment updates are
-            just one click away, right from your Mac’s menu bar.
+          <p className="mt-24 max-w-3xl text-justify font-mono text-2xl leading-relaxed font-semibold text-black sm:mt-64 sm:text-3xl">
+            &nbsp; Monitor your GitHub actions and Vercel deployments real-time
+            on your Mac—no need to open the web app! With Deplog, all your
+            deployment updates are just one click away, right from your Mac’s
+            menu bar.
           </p>
           <br></br>
           <br></br>
