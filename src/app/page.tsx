@@ -73,7 +73,7 @@ export default function Index() {
             <p className="font-semibold text-stone-400">
               Crafted by Emre Demirbulut
             </p>
-            <p className="text-center font-semibold text-stone-400">©2025</p>
+            <p className="text-center font-semibold text-stone-400">©2026</p>
           </div>
           <div>
             <p className="text-sm font-medium text-stone-400">

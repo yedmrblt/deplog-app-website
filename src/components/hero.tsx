@@ -15,7 +15,7 @@ export default function Hero() {
       >
         Deplog
         <span className="absolute ml-2 rounded-lg border px-1 py-0.5 font-mono text-sm font-semibold text-stone-500">
-          v2.0
+          v2.1
         </span>
       </motion.p>
 
