@@ -28,9 +28,8 @@ export default function Hero() {
         className="pt-5 pb-10"
       >
         <h1 className="flex flex-col items-center text-center font-[Bricolage_Grotesque] text-5xl font-bold sm:text-8xl">
-          <span>Monitor</span>
-          <span>GitHub & Vercel </span>
-          <span>deployments on your Mac</span>
+          <span>Deployments</span>
+          <span>on your Mac</span>
         </h1>
       </motion.div>
       <motion.div

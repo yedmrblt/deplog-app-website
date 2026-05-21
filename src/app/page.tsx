@@ -6,7 +6,7 @@ import { META } from "@/lib/meta";
 export default function Index() {
   return (
     <>
-      <section className="flex w-full flex-col items-center sm:pt-24">
+      <section className="flex w-full flex-col items-center sm:pt-12">
         <Hero></Hero>
         <Desktop></Desktop>
         <section>

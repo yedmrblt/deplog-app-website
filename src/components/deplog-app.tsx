@@ -8,7 +8,7 @@ import {
   ChevronDownIcon,
   GitBranchIcon,
   ArrowUpRightIcon,
-  PowerIcon,
+  SettingsIcon,
 } from "lucide-react";
 
 interface Deployment {
@@ -239,7 +239,7 @@ export default function PulseApp() {
         }}
         className="h-full w-full"
       >
-        <div className="relative w-full rounded-2xl bg-[#0b0b0b] p-4 shadow-2xl shadow-slate-800/60 backdrop-blur-3xl">
+        <div className="relative w-full rounded-3xl bg-[#0b0b0b] p-5 shadow-2xl shadow-slate-800/60 backdrop-blur-3xl">
           <div className="mb-4 flex items-center justify-between gap-2 text-zinc-400">
             {selectedDeployment && (
               <div
@@ -250,40 +250,44 @@ export default function PulseApp() {
                 <h2 className="text-xs font-medium">Back</h2>
               </div>
             )}
-            <div className="flex w-full gap-2 rounded-md bg-zinc-800">
-              <div
-                className={`flex w-1/2 cursor-pointer items-center justify-center rounded-md px-2 py-1 ${
-                  selectedSource === "vercel" ? "bg-blue-500" : "bg-zinc-800"
-                }`}
-                onClick={() => {
-                  setSelectedSource("vercel");
-                  setDeploymentList(deployments);
-                }}
-              >
-                <h2 className="text-xs font-medium text-white">Vercel</h2>
+            {!selectedDeployment && (
+              <div className="flex w-full gap-2 rounded-md bg-zinc-800">
+                <div
+                  className={`flex w-1/2 cursor-pointer items-center justify-center rounded-md px-2 py-1 ${
+                    selectedSource === "vercel" ? "bg-blue-500" : "bg-zinc-800"
+                  }`}
+                  onClick={() => {
+                    setSelectedSource("vercel");
+                    setDeploymentList(deployments);
+                  }}
+                >
+                  <h2 className="text-xs font-medium text-white">Vercel</h2>
+                </div>
+                <div
+                  className={`flex w-1/2 cursor-pointer items-center justify-center rounded-md px-2 py-1 ${
+                    selectedSource === "github" ? "bg-blue-500" : "bg-zinc-800"
+                  }`}
+                  onClick={() => {
+                    if (selectedDeployment) {
+                      return;
+                    }
+                    setSelectedSource("github");
+                    selectedRepository?.name
+                      ? setDeploymentList(
+                          githubDeployments[selectedRepository.name],
+                        )
+                      : [];
+                  }}
+                >
+                  <h2 className="text-xs font-medium text-white">GitHub</h2>
+                </div>
               </div>
-              <div
-                className={`flex w-1/2 cursor-pointer items-center justify-center rounded-md px-2 py-1 ${
-                  selectedSource === "github" ? "bg-blue-500" : "bg-zinc-800"
-                }`}
-                onClick={() => {
-                  if (selectedDeployment) {
-                    return;
-                  }
-                  setSelectedSource("github");
-                  selectedRepository?.name
-                    ? setDeploymentList(
-                        githubDeployments[selectedRepository.name],
-                      )
-                    : [];
-                }}
-              >
-                <h2 className="text-xs font-medium text-white">GitHub</h2>
+            )}
+            {!selectedDeployment && (
+              <div className="flex h-[24px] cursor-pointer items-center justify-center gap-1 rounded-md bg-zinc-800 px-3 py-1 text-xs font-medium text-white">
+                <SettingsIcon size={14}></SettingsIcon>
               </div>
-            </div>
-            <div className="flex cursor-pointer items-center justify-center gap-1 rounded-md bg-zinc-800 px-3 py-1 text-xs font-medium text-white">
-              <PowerIcon size={14}></PowerIcon>Quit
-            </div>
+            )}
           </div>
           {!selectedDeployment && (
             <div className="flex items-center justify-between text-white">
