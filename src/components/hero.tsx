@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="font-serif text-3xl font-semibold"
+        className="-ml-[13px] font-serif text-3xl font-semibold"
       >
         Deplog
         <span className="absolute ml-2 rounded-lg border px-1 py-0.5 font-mono text-sm font-semibold text-stone-500">

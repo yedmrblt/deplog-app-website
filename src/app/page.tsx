@@ -1,6 +1,7 @@
 import ButtonAppStore from "@/components/button-appstore";
 import Hero from "@/components/hero";
 import Desktop from "@/components/desktop";
+import { MousePointerClickIcon } from "lucide-react";
 import { META } from "@/lib/meta";
 
 export default function Index() {
@@ -10,7 +11,10 @@ export default function Index() {
         <Hero></Hero>
         <Desktop></Desktop>
         <section>
-          <p className="mt-24 max-w-3xl text-justify font-mono text-2xl leading-relaxed font-semibold text-black sm:mt-64 sm:text-3xl">
+          <div className="mt-12 mb-12 flex w-full items-center justify-center gap-4 text-center font-mono text-sm font-semibold text-stone-400 sm:mt-56">
+            <MousePointerClickIcon size={24} /> it's interactive!
+          </div>
+          <p className="max-w-3xl text-justify font-mono text-2xl leading-relaxed font-semibold text-black sm:text-3xl">
             &nbsp; Monitor your GitHub actions and Vercel deployments real-time
             on your Mac—no need to open the web app! With Deplog, all your
             deployment updates are just one click away, right from your Mac’s
@@ -67,19 +71,6 @@ export default function Index() {
               Crafted by Emre Demirbulut
             </p>
             <p className="text-center font-semibold text-stone-400">©2026</p>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-stone-400">
-              Inspired by{" "}
-              <a
-                href="https://tryalcove.com"
-                rel="noreferrer nofollow"
-                target="_blank"
-                className="underline"
-              >
-                Alcove
-              </a>
-            </p>
           </div>
         </footer>
       </section>
